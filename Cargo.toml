@@ -1,0 +1,29 @@
+[package]
+name = "kencho_rust"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+#                             #
+# Tutorial of proconio::input #
+#                             #
+
+[[bin]]
+name = "io1"
+path = "src/proconio/ex_1.rs"
+
+[[bin]]
+name = "io2"
+path = "src/proconio/ex_2.rs"
+
+[[bin]]
+name = "io3"
+path = "src/proconio/ex_3.rs"
+
+[[bin]]
+name = "io4"
+path = "src/proconio/ex_4.rs"
+
+[dependencies]
+proconio = "0.4.5"
