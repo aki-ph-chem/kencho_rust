@@ -25,5 +25,13 @@ path = "src/proconio/ex_3.rs"
 name = "io4"
 path = "src/proconio/ex_4.rs"
 
+#     #
+# ss3 # 
+#     #
+
+[[bin]]
+name = "line_search"
+path = "src/ss3/line_search.rs"
+
 [dependencies]
 proconio = "0.4.5"
