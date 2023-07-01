@@ -33,5 +33,9 @@ path = "src/proconio/ex_4.rs"
 name = "line_search"
 path = "src/ss3/line_search.rs"
 
+[[bin]]
+name = "min_search"
+path = "src/ss3/min_search.rs"
+
 [dependencies]
 proconio = "0.4.5"
