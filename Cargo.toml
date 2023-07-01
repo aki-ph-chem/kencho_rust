@@ -37,5 +37,9 @@ path = "src/ss3/line_search.rs"
 name = "min_search"
 path = "src/ss3/min_search.rs"
 
+[[bin]]
+name = "pair_sum"
+path = "src/ss3/pair_sum.rs"
+
 [dependencies]
 proconio = "0.4.5"
