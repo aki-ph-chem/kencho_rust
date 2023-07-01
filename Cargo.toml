@@ -73,5 +73,15 @@ path = "src/ss4/fib_memo.rs"
 name = "pair_sum_rec"
 path = "src/ss4/pair_sum.rs"
 
+#     #
+# ss5 #
+#     #
+
+# ss5/dp
+
+[[bin]]
+name = "ex_search"
+path = "src/ss5/dp/ex_search.rs"
+
 [dependencies]
 proconio = "0.4.5"
