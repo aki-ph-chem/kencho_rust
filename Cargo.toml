@@ -57,5 +57,9 @@ path = "src/ss4/sum_rec.rs"
 name = "gcd"
 path = "src/ss4/gcd.rs"
 
+[[bin]]
+name = "fib"
+path = "src/ss4/fib.rs"
+
 [dependencies]
 proconio = "0.4.5"
