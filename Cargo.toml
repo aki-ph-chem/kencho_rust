@@ -53,5 +53,9 @@ path = "src/ss3/pair_sum_bit.rs"
 name = "sum_rec"
 path = "src/ss4/sum_rec.rs"
 
+[[bin]]
+name = "gcd"
+path = "src/ss4/gcd.rs"
+
 [dependencies]
 proconio = "0.4.5"
