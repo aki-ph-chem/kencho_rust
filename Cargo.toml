@@ -61,5 +61,9 @@ path = "src/ss4/gcd.rs"
 name = "fib"
 path = "src/ss4/fib.rs"
 
+[[bin]]
+name = "fib_for"
+path = "src/ss4/fib_for.rs"
+
 [dependencies]
 proconio = "0.4.5"
