@@ -2,9 +2,10 @@
 
 C++で解説されているけんちょ本をRustで。
 
-## proconio
+## [proconio](./src/proconio)
+### [ノート](./docs/proconio)
 
-Rustでは他の言語と比べて標準入力から値を受け取る処理を書くだけで、それなりのコード量が必要となる。そこでクレート`proconio`を使う。
+`proconio`のメモ
 
 ## [ss3　全探索](./src/ss3)
 
