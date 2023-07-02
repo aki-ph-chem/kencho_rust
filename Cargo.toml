@@ -81,6 +81,10 @@ path = "src/ss4/pair_sum.rs"
 name = "frog"
 path = "src/ss5/frog.rs"
 
+[[bin]]
+name = "frog_rec"
+path = "src/ss5/frog_rec.rs"
+
 # ss5/dp
 
 [[bin]]
