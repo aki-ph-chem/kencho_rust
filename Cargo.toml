@@ -115,5 +115,9 @@ path = "src/ss6/bin_search.rs"
 name = "bin_search_gen"
 path = "src/ss6/bin_search_generic.rs"
 
+[[bin]]
+name = "bin_method"
+path = "src/ss6/bin_method.rs"
+
 [dependencies]
 proconio = "0.4.5"
