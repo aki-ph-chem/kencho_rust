@@ -9,11 +9,11 @@ Rustでは他の言語と比べて標準入力から値を受け取る処理を�
 ```C++
 // 数値を受け取る
 int n;
-std::cin << n;
+std::cin >> n;
 
 // 文字列を受け取る
 std::string str;
-std::cin << str;
+std::cin >> str;
 ```
 
 ```Rust
@@ -28,7 +28,7 @@ input!{
 
 例2) 標準入力から値の列を一次元配列として受け取る
 ```C++ int n;
-std::cin << n;
+std::cin >> n;
 std::vector<int> array(n);
 for(std::size_t i = 0; i < n; ++i) std::cin >> array[i];
 ```
@@ -46,12 +46,12 @@ input! {
 
 ```C++
 int n,m;
-std::cin << n << m;
+std::cin >> n >> m;
 std::vector<std::vector<int>> array(n, std::vector<int>(m));
 
 for(std::size_t i = 0; i < n; ++i){
     for(std::size_t j = 0; j < m; ++j){
-        std::cin << array[i][j];
+        std::cin >> array[i][j];
     }
 }
 ```
