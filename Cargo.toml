@@ -111,5 +111,9 @@ path = "src/ss5/dp/memo_search_loop.rs"
 name = "bin_search"
 path = "src/ss6/bin_search.rs"
 
+[[bin]]
+name = "bin_search_gen"
+path = "src/ss6/bin_search_generic.rs"
+
 [dependencies]
 proconio = "0.4.5"
