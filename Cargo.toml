@@ -127,6 +127,10 @@ path = "src/ss6/age.rs"
 name = "bin_search_pair"
 path = "src/ss6/bin_search_pair.rs"
 
+[[bin]]
+name = "shooting_king"
+path = "src/ss6/shooting_king.rs"
+
 #     #
 # ss7 #
    
