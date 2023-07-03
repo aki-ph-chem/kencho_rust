@@ -127,5 +127,12 @@ path = "src/ss6/age.rs"
 name = "bin_search_pair"
 path = "src/ss6/bin_search_pair.rs"
 
+#     #
+# ss7 #
+   
+[[bin]]
+name = "greedy"
+path = "src/ss7/greedy.rs"
+
 [dependencies]
 proconio = "0.4.5"
