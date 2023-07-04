@@ -89,6 +89,10 @@ path = "src/ss5/frog_rec.rs"
 name = "knap"
 path = "src/ss5/knapsack.rs"
 
+[[bin]]
+name = "edit"
+path = "src/ss5/edit.rs"
+
 # ss5/dp
 
 [[bin]]
