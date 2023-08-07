@@ -156,5 +156,9 @@ path = "src/ss10/graph_2.rs"
 name = "graph_w"
 path = "src/ss10/graph_weight.rs"
 
+[[bin]]
+name = "heap"
+path = "src/ss10/heap.rs"
+
 [dependencies]
 proconio = "0.4.5"
