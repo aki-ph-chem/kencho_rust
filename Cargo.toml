@@ -142,5 +142,19 @@ path = "src/ss6/shooting_king.rs"
 name = "greedy"
 path = "src/ss7/greedy.rs"
 
+#      #
+# ss10 #
+[[bin]]
+name = "graph_1"
+path = "src/ss10/graph_1.rs"
+
+[[bin]]
+name = "graph_2"
+path = "src/ss10/graph_2.rs"
+
+[[bin]]
+name = "graph_w"
+path = "src/ss10/graph_weight.rs"
+
 [dependencies]
 proconio = "0.4.5"
