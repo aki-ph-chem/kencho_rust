@@ -190,5 +190,9 @@ path = "src/ss13/bipair.rs"
 name = "topo"
 path = "src/ss13/topo.rs"
 
+[[bin]]
+name = "dp_tree"
+path = "src/ss13/dp_tree.rs"
+
 [dependencies]
 proconio = "0.4.5"
