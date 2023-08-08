@@ -170,5 +170,9 @@ path = "src/ss13/bfs.rs"
 name = "bfs_all"
 path = "src/ss13/bfs_all.rs"
 
+[[bin]]
+name = "dfs_rec"
+path = "src/ss13/dfs_rec.rs"
+
 [dependencies]
 proconio = "0.4.5"
