@@ -182,5 +182,9 @@ path = "src/ss13/bfs_dist.rs"
 name = "dfs_st"
 path = "src/ss13/dfs_st.rs"
 
+[[bin]]
+name = "bipair"
+path = "src/ss13/bipair.rs"
+
 [dependencies]
 proconio = "0.4.5"
