@@ -41,10 +41,11 @@ fn main() {
         pair: [(usize,usize); m],
     }
 
-    // 有向グラフ
+    // 無向グラフ
     let mut graph: Graph= vec![vec![]; n];
     for (a, b) in pair {
         graph[a].push(b);
+        graph[b].push(a);
     }
     println!("graph = {:#?}", graph);
 
