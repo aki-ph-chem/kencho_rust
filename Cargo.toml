@@ -160,5 +160,15 @@ path = "src/ss10/graph_weight.rs"
 name = "heap"
 path = "src/ss10/heap.rs"
 
+#      #
+# ss13 #
+[[bin]]
+name = "bfs"
+path = "src/ss13/bfs.rs"
+
+[[bin]]
+name = "bfs_all"
+path = "src/ss13/bfs_all.rs"
+
 [dependencies]
 proconio = "0.4.5"
