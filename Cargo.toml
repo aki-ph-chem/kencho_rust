@@ -186,5 +186,9 @@ path = "src/ss13/dfs_st.rs"
 name = "bipair"
 path = "src/ss13/bipair.rs"
 
+[[bin]]
+name = "topo"
+path = "src/ss13/topo.rs"
+
 [dependencies]
 proconio = "0.4.5"
