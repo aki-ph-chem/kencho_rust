@@ -191,6 +191,10 @@ name = "topo"
 path = "src/ss13/topo.rs"
 
 [[bin]]
+name = "search_tree"
+path = "src/ss13/search_tree.rs"
+
+[[bin]]
 name = "dp_tree"
 path = "src/ss13/dp_tree.rs"
 
