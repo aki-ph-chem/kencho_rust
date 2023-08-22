@@ -166,6 +166,10 @@ path = "src/ss10/heap.rs"
 name = "union_find"
 path = "src/ss11/union_find.rs"
 
+[[bin]]
+name = "count_connected"
+path = "src/ss11/count_connected.rs"
+
 #      #
 # ss13 #
 [[bin]]
