@@ -161,6 +161,12 @@ name = "heap"
 path = "src/ss10/heap.rs"
 
 #      #
+# ss11 #
+[[bin]]
+name = "union_find"
+path = "src/ss11/union_find.rs"
+
+#      #
 # ss13 #
 [[bin]]
 name = "bfs"
