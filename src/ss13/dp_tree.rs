@@ -47,6 +47,8 @@ fn main() {
     let mut depth = vec![0; n];
     dfs(&graph, &mut subtree_size, &mut depth, 0, std::usize::MAX, 0);
 
-    println!("depth = {:#?}", depth);
-    println!("subtree_size = {:#?}", subtree_size);
+    for v in 0..n {
+        print!("{}: depth = {} ", v, depth[v]);
+        println!(", subtree_size = {}", subtree_size[v]);
+    }
 }
