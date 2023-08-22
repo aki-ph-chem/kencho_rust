@@ -208,5 +208,11 @@ path = "src/ss13/search_tree.rs"
 name = "dp_tree"
 path = "src/ss13/dp_tree.rs"
 
+#      #
+# ss14 #
+[[bin]]
+name = "bellman_ford"
+path = "src/ss14/bellman_ford.rs"
+
 [dependencies]
 proconio = "0.4.5"
