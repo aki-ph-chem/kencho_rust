@@ -214,5 +214,9 @@ path = "src/ss13/dp_tree.rs"
 name = "bellman_ford"
 path = "src/ss14/bellman_ford.rs"
 
+[[bin]]
+name = "dijkstra_simple"
+path = "src/ss14/dijkstra_simple.rs"
+
 [dependencies]
 proconio = "0.4.5"
