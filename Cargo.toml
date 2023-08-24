@@ -218,5 +218,9 @@ path = "src/ss14/bellman_ford.rs"
 name = "dijkstra_simple"
 path = "src/ss14/dijkstra_simple.rs"
 
+[[bin]]
+name = "dijkstra_heap"
+path = "src/ss14/dijkstra_heap.rs"
+
 [dependencies]
 proconio = "0.4.5"
