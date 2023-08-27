@@ -222,5 +222,18 @@ path = "src/ss14/dijkstra_simple.rs"
 name = "dijkstra_heap"
 path = "src/ss14/dijkstra_heap.rs"
 
+# ss14/appendix
+[[bin]]
+name = "heap0"
+path = "src/ss14/appendix/heap_0.rs"
+
+[[bin]]
+name = "heap1"
+path = "src/ss14/appendix/heap_1.rs"
+
+[[bin]]
+name = "heap2"
+path = "src/ss14/appendix/heap_2.rs"
+
 [dependencies]
 proconio = "0.4.5"
