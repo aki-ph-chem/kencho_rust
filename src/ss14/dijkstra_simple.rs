@@ -50,7 +50,7 @@ fn main() {
     // ダイクストラ法
     let mut used = vec![false; n];
     let mut dist = vec![INF; n];
-    dist[0] = 0;
+    dist[s] = 0;
     for _iter in 0..n {
         // 使用済みでない頂点うちdistが最小のものを探す
         let mut min_dist = INF;
