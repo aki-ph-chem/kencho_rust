@@ -222,6 +222,10 @@ path = "src/ss14/dijkstra_simple.rs"
 name = "dijkstra_heap"
 path = "src/ss14/dijkstra_heap.rs"
 
+[[bin]]
+name = "floyd_warshall"
+path = "src/ss14/floyd_warshall.rs"
+
 # ss14/appendix
 [[bin]]
 name = "heap0"
