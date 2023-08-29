@@ -239,5 +239,13 @@ path = "src/ss14/appendix/heap_1.rs"
 name = "heap2"
 path = "src/ss14/appendix/heap_2.rs"
 
+#      #
+# ss15 #
+
+# ss15/appendix
+[[bin]]
+name = "sort_vec0"
+path = "src/ss15/appendix/sort_vec_0.rs"
+
 [dependencies]
 proconio = "0.4.5"
