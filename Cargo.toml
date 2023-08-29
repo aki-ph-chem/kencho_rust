@@ -167,6 +167,10 @@ name = "union_find"
 path = "src/ss11/union_find.rs"
 
 [[bin]]
+name = "uf_dbg"
+path = "src/ss11/uf_dbg.rs"
+
+[[bin]]
 name = "count_connected"
 path = "src/ss11/count_connected.rs"
 
