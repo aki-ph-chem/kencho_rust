@@ -11,6 +11,8 @@ ss3, ss4はok, ss5は編集距離が消化不足、ss6では射撃王が消化�
 
 `proconio`のメモ
 
+## [LLDBのノート](./docs/lldb)
+
 ## [ss3　全探索](./src/ss3)
 
 ## [ss4 再帰と分割統治法](./src/ss4)
