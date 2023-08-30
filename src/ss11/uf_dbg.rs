@@ -1,3 +1,5 @@
+use std::mem;
+
 struct UnionFind {
     parents: Vec<usize>,
     size: Vec<usize>,
@@ -6,7 +8,10 @@ struct UnionFind {
 impl UnionFind {
     // コンストラクタ
     fn new(n: usize) -> UnionFind {
-        UnionFind{parents: vec![std::usize::MAX; n], size: vec![1; n]}
+        UnionFind {
+            parents: vec![std::usize::MAX; n],
+            size: vec![1; n],
+        }
     }
 
     // xを含むグループのサイズ
@@ -31,7 +36,7 @@ impl UnionFind {
         } else {
             self.parents[x] = self.root(self.parents[x]);
             self.parents[x]
-        } 
+        }
     }
 
     // 頂点x,yが同じグループに属するか否か
@@ -42,15 +47,13 @@ impl UnionFind {
 
     // xを含むグループとyを含むグループを併合する
     fn unite(&mut self, x: usize, y: usize) -> bool {
-        let (x_root, y_root) = (self.root(x), self.root(y));
+        let (mut x_root, mut y_root) = (self.root(x), self.root(y));
         if x_root == y_root {
             false
         } else {
-            let x_root = if self.size(x_root) < self.size(y_root) {
-                y_root
-            } else {
-                x_root
-            };
+            if self.size(x_root) < self.size(y_root) {
+                mem::swap(&mut x_root, &mut y_root);
+            }
             self.parents[y_root] = x_root;
             self.size[x_root] += self.size[y_root];
             true
@@ -60,9 +63,9 @@ impl UnionFind {
 
 fn main() {
     let mut uf = UnionFind::new(5); //{0},{1},{2},{3},{4},{5}
-    uf.unite(3,0); // {0,3},{1},{2},{4},{5}
-    uf.unite(3,4); // {0,3,4},{1},{2},{5}
-    uf.unite(2,3); // {0,3,4,2},{1},{5}
-    uf.unite(0,1); // {0,1,3,4,2},{5} // ここでstack over flowする
-    //uf.unite(1,2);
+    uf.unite(3, 0); // {0,3},{1},{2},{4},{5}
+    uf.unite(3, 4); // {0,3,4},{1},{2},{5}
+    uf.unite(2, 3); // {0,3,4,2},{1},{5}
+    uf.unite(0, 1); // {0,1,3,4,2},{5} // ここでstack over flowする
+    uf.unite(1, 2);
 }
