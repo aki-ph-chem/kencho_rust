@@ -52,10 +52,10 @@ impl UnionFind {
         if x_root == y_root {
             false
         } else {
-            let x_root = if self.size(x_root) < self.size(y_root) {
-                y_root
+            let (x_root, y_root) = if self.size(x_root) < self.size(y_root) {
+                (y_root, x_root)
             } else {
-                x_root
+                (x_root, y_root)
             };
             self.parents[y_root] = x_root;
             self.size[x_root] += self.size[y_root];
