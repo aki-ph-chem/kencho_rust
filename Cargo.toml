@@ -175,6 +175,12 @@ name = "count_connected"
 path = "src/ss11/count_connected.rs"
 
 #      #
+# ss12 #
+[[bin]]
+name = "insert_sort"
+path = "src/ss12/insert_sort.rs"
+
+#      #
 # ss13 #
 [[bin]]
 name = "bfs"
