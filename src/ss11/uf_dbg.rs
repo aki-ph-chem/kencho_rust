@@ -1,5 +1,3 @@
-use std::mem;
-
 struct UnionFind {
     parents: Vec<usize>,
     size: Vec<usize>,
@@ -47,13 +45,15 @@ impl UnionFind {
 
     // xを含むグループとyを含むグループを併合する
     fn unite(&mut self, x: usize, y: usize) -> bool {
-        let (mut x_root, mut y_root) = (self.root(x), self.root(y));
+        let (x_root, y_root) = (self.root(x), self.root(y));
         if x_root == y_root {
             false
         } else {
-            if self.size(x_root) < self.size(y_root) {
-                mem::swap(&mut x_root, &mut y_root);
-            }
+            let (x_root, y_root) = if self.size(x_root) < self.size(y_root) {
+                (y_root, x_root)
+            } else {
+                (x_root, y_root)
+            };
             self.parents[y_root] = x_root;
             self.size[x_root] += self.size[y_root];
             true
