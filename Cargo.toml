@@ -180,6 +180,10 @@ path = "src/ss11/count_connected.rs"
 name = "insert_sort"
 path = "src/ss12/insert_sort.rs"
 
+[[bin]]
+name = "merge_sort"
+path = "src/ss12/merge_sort.rs"
+
 #      #
 # ss13 #
 [[bin]]
