@@ -24,13 +24,13 @@ fn merge_sort(array: &mut [i32], left: usize, right: usize) {
     for i in left..right {
         // 左側
         if buf[index_left] <= buf[index_right] {
-            index_left += 1;
             array[i] = buf[index_left];
+            index_left += 1;
         } 
         // 右側
         else {
-            index_right -= 1;
             array[i] = buf[index_right];
+            index_right -= 1;
         }
     }
 }
