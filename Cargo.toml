@@ -184,6 +184,10 @@ path = "src/ss12/insert_sort.rs"
 name = "merge_sort"
 path = "src/ss12/merge_sort.rs"
 
+[[bin]]
+name = "quick_sort"
+path = "src/ss12/quick_sort.rs"
+
 #      #
 # ss13 #
 [[bin]]
