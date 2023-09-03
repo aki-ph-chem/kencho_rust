@@ -168,6 +168,10 @@ path = "src/ss8/hash_map.rs"
 name = "stack"
 path = "src/ss9/stack.rs"
 
+[[bin]]
+name = "que"
+path = "src/ss9/que.rs"
+
 #      #
 # ss10 #
 [[bin]]
