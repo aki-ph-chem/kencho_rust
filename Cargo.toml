@@ -188,6 +188,10 @@ path = "src/ss12/merge_sort.rs"
 name = "quick_sort"
 path = "src/ss12/quick_sort.rs"
 
+[[bin]]
+name = "heap_sort"
+path = "src/ss12/heap_sort.rs"
+
 #      #
 # ss13 #
 [[bin]]
