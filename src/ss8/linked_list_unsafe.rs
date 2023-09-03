@@ -24,7 +24,7 @@ unsafe fn show_list<T>(head: *mut Node<T>)
     where T: std::fmt::Display
 {
     let mut current:*mut Node<T> = (*head).next;
-    while current != std::ptr::null_mut() {
+    while current != head {
         print!("{} ->", (*current).item);
         current = (*current).next;
     }
@@ -34,6 +34,8 @@ unsafe fn show_list<T>(head: *mut Node<T>)
 fn main() {
     // リストの先頭
     let mut head = Node::new("head".to_string());
+    // nextは自分を指すようにする
+    head.next = &mut head;
 
     // headに対してnode_1 ~ node_3をつなげる
     let mut node_1 = Node::new("yamamoto".to_string());
