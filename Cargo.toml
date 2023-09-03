@@ -192,6 +192,10 @@ path = "src/ss12/quick_sort.rs"
 name = "heap_sort"
 path = "src/ss12/heap_sort.rs"
 
+[[bin]]
+name = "bucket_sort"
+path = "src/ss12/bucket_sort.rs"
+
 #      #
 # ss13 #
 [[bin]]
