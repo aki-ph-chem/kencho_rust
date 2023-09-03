@@ -161,6 +161,13 @@ path = "src/ss8/bidirectional_list_unsafe.rs"
 name = "hash_map"
 path = "src/ss8/hash_map.rs"
 
+
+#     #
+# ss9 #
+[[bin]]
+name = "stack"
+path = "src/ss9/stack.rs"
+
 #      #
 # ss10 #
 [[bin]]
