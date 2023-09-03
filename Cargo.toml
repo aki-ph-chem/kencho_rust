@@ -142,6 +142,17 @@ path = "src/ss6/shooting_king.rs"
 name = "greedy"
 path = "src/ss7/greedy.rs"
 
+
+#     #
+# ss8 #
+[[bin]]
+name = "array"
+path = "src/ss8/array.rs"
+
+[[bin]]
+name = "linked_list_unsafe"
+path = "src/ss8/linked_list_unsafe.rs"
+
 #      #
 # ss10 #
 [[bin]]
