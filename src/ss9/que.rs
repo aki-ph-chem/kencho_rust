@@ -36,7 +36,48 @@ impl Que {
             self.tail =0;
         }
     }
+
+    fn deque(&mut self) -> i32 {
+        if self.is_empty() {
+            println!("error: queue is empty");
+            return -1;
+        }
+        let res = self.storage[self.head];
+        self.head += 1;
+        if self.head == MAX_SIZE {
+            self.head = 0;
+        }
+        return res;
+    }
+
+    fn show(&self) {
+        if self.is_empty() {
+            println!("error: queue is empty");
+        }else{
+            for i in self.head..self.tail {
+                print!("{} ", self.storage[i]);
+            }
+            println!("");
+        }
+    }
 }
 
 fn main() {
+    let mut que_0 = Que::new(); 
+    que_0.enque(3);
+    que_0.enque(5);
+    que_0.enque(7);
+    que_0.show();
+
+    println!("{}", que_0.deque());
+    println!("{}", que_0.deque());
+    println!("{}", que_0.deque());
+
+    // エラー: empty
+    println!("{}", que_0.deque());
+    que_0.show();
+
+    que_0.enque(9);
+    que_0.enque(11);
+    que_0.show();
 }
