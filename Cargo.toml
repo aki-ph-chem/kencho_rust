@@ -25,6 +25,15 @@ path = "src/proconio/ex_3.rs"
 name = "io4"
 path = "src/proconio/ex_4.rs"
 
+#      #
+# lldb # 
+#      #
+
+[[bin]]
+name = "dbg_1"
+path = "src/lldb/dbg_1.rs"
+
+
 #     #
 # ss3 # 
 #     #
