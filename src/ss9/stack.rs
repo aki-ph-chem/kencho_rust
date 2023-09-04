@@ -40,15 +40,20 @@ impl Stack {
     }
 
     fn show(&self) {
-        for i in 0..self.top {
-            print!("{} ", self.storage[i]);
+        if self.is_empty() {
+            println!("error: stack is empty");
+        } else {
+            for i in 0..self.top {
+                print!("{} ", self.storage[i]);
+            }
+            println!("");
         }
-        println!("");
     }
 }
 
 fn main() {
     let mut stack_0 = Stack::new();
+    stack_0.show(); // stack_0がemptyなのでエラー 
     stack_0.push(3); //{3}
     stack_0.push(5); //{3,5}
     stack_0.push(7); //{3,5,7}
