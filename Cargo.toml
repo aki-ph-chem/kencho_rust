@@ -151,6 +151,10 @@ path = "src/ss6/shooting_king.rs"
 name = "greedy"
 path = "src/ss7/greedy.rs"
 
+[[bin]]
+name = "schedule"
+path = "src/ss7/schedule.rs"
+
 
 #     #
 # ss8 #
