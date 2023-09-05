@@ -155,6 +155,10 @@ path = "src/ss7/greedy.rs"
 name = "schedule"
 path = "src/ss7/schedule.rs"
 
+[[bin]]
+name = "multiple_array"
+path = "src/ss7/multiple_array.rs"
+
 
 #     #
 # ss8 #
