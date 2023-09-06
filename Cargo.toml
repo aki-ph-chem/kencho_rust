@@ -318,6 +318,12 @@ path = "src/ss14/appendix/heap_2.rs"
 name = "kruskal"
 path = "src/ss15/kruskal.rs"
 
+#      #
+# ss16 #
+[[bin]]
+name = "net_flow"
+path = "src/ss16/net_flow.rs"
+
 # ss15/appendix
 [[bin]]
 name = "sort_vec0"
