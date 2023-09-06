@@ -318,16 +318,17 @@ path = "src/ss14/appendix/heap_2.rs"
 name = "kruskal"
 path = "src/ss15/kruskal.rs"
 
-#      #
-# ss16 #
-[[bin]]
-name = "net_flow"
-path = "src/ss16/net_flow.rs"
 
 # ss15/appendix
 [[bin]]
 name = "sort_vec0"
 path = "src/ss15/appendix/sort_vec_0.rs"
+
+#      #
+# ss16 #
+[[bin]]
+name = "net_flow"
+path = "src/ss16/net_flow.rs"
 
 [dependencies]
 proconio = "0.4.5"
