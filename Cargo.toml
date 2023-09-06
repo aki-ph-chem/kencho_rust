@@ -330,5 +330,10 @@ path = "src/ss15/appendix/sort_vec_0.rs"
 name = "net_flow"
 path = "src/ss16/net_flow.rs"
 
+# ss16/appendix
+[[bin]]
+name = "borrow_mut"
+path = "src/ss16/appendix/borrow_mut.rs"
+
 [dependencies]
 proconio = "0.4.5"
