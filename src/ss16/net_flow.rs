@@ -21,7 +21,7 @@ impl Edge {
 
 struct Graph {
     // 近接リスト
-    list: Vec<Vec<Edge>>,
+    list: Vec<Vec<Rc<RefCell<Edge>>>>,
 }
 
 impl Graph {
@@ -35,16 +35,16 @@ impl Graph {
     }
 
     // 辺 e = (u,v)の逆辺 (v,u)を取得する
-    fn rev_edge(&mut self, e: &mut Edge) -> &mut Edge {
-        &mut self.list[e.to][e.rev]
+    fn rev_edge(&mut self, e: &Rc<RefCell<Edge>>) -> &Rc<RefCell<Edge>> {
+        &self.list[e.borrow().to][e.borrow().rev]
     }
 
     // 辺 e = (u,v)に流量fのflowを流す
     // このとき、(u,v)の流量はfだけ現象する
     // 逆辺 (v,u)の流量はfだけ増加する 
-    fn run_flow(&mut self, e: &mut Edge, f: i32) {
-        e.cap -= f;
-        self.rev_edge(e).cap += f;
+    fn run_flow(&mut self, e: &Rc<RefCell<Edge>>, f: i32) {
+        e.borrow_mut().cap -= f;
+        self.rev_edge(e).borrow_mut().cap += f;
     }
 
     // 頂点 from からtoへ容量capの辺を張る
@@ -52,8 +52,8 @@ impl Graph {
     fn add_edge(&mut self, from: usize, to: usize, cap: i32) {
         let from_rev = self.list[from].len();
         let to_rev = self.list[to].len();
-        self.list[from].push(Edge::new(to_rev, from, to, cap));
-        self.list[from].push(Edge::new(from_rev, to, from, 0));
+        self.list[from].push(Rc::new(RefCell::new(Edge::new(to_rev, from, to, cap))));
+        self.list[from].push(Rc::new(RefCell::new(Edge::new(from_rev, to, from, 0))));
     }
 }
 
@@ -61,7 +61,7 @@ impl Graph {
 // [] をオーバーロード
 // 不変
 impl Index<usize> for Graph {
-    type Output = Vec<Edge>;
+    type Output = Vec<Rc<RefCell<Edge>>>;
     fn index(&self, index: usize) -> &Self::Output {
         &self.list[index]
     }
@@ -69,7 +69,7 @@ impl Index<usize> for Graph {
 
 // 可変
 impl IndexMut<usize> for Graph {
-    fn index_mut(&mut self, index: usize) -> &mut Vec<Edge> {
+    fn index_mut(&mut self, index: usize) -> &mut Vec<Rc<RefCell<Edge>>> {
         &mut self.list[index]
     }
 }
@@ -86,27 +86,27 @@ impl FordFulkerson {
     // 残余グラフ上でs-t path を DFSで探す
     // 返り値は s-t path上での容量の最小値
     // f: sからvへ到達した過程の各辺の容量の最小値
-    fn ford_fulkerson(&mut self, graph: Rc<RefCell<Graph>>, v: usize, t: usize, f: i32) -> i32 {
+    fn ford_fulkerson(&mut self, graph: &Graph, v: usize, t: usize, f: i32) -> i32 {
         // 終端tに到達したらreturn
         if v == t {
             return f;
         }
         // DFS
         self.seen[v] = true;
-        for mut e in graph.borrow_mut()[v]{
-            if self.seen[e.to] {continue;}
+        for e in &graph[v]{
+            if self.seen[e.borrow().to] {continue;}
             // 容量0の辺は存在しない(ことになっている)
-            if e.cap == 0 {
+            if e.borrow().cap == 0 {
                 continue;
             }
             // s-t pathを探す
             // 見つかった場合flowはpathの最小容量
             // 見つからなかった場合 f = 0
-            let flow = self.ford_fulkerson(graph, e.to, t, min(f, e.cap)); 
+            let flow = self.ford_fulkerson(graph, e.borrow().to, t, min(f, e.borrow().cap)); 
             // s-t pathが見つからなければ次の辺を試す
             if flow == 0 {continue;}
             // eに容量flowのフローを流す
-            graph.borrow_mut().run_flow(&mut e, flow);
+            graph.run_flow(e, flow);
             // s-t パスが見つかったらpath上の最小容量を返す
             return flow;
         }
