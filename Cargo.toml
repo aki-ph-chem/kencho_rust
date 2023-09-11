@@ -335,5 +335,9 @@ path = "src/ss16/net_flow.rs"
 name = "borrow_mut"
 path = "src/ss16/appendix/borrow_mut.rs"
 
+[[bin]]
+name = "borrow_mut2"
+path = "src/ss16/appendix/borrow_mut2.rs"
+
 [dependencies]
 proconio = "0.4.5"
