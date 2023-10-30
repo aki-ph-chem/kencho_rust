@@ -194,6 +194,10 @@ path = "src/ss9/que.rs"
 name = "p_9_2"
 path = "src/ss9/problem/p_9_2.rs"
 
+[[bin]]
+name = "p_9_3"
+path = "src/ss9/problem/p_9_3.rs"
+
 #      #
 # ss10 #
 [[bin]]
