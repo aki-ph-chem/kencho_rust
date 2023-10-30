@@ -189,6 +189,11 @@ path = "src/ss9/stack.rs"
 name = "que"
 path = "src/ss9/que.rs"
 
+## ss9章末問題 ##
+[[bin]]
+name = "p_9_2"
+path = "src/ss9/problem/p_9_2.rs"
+
 #      #
 # ss10 #
 [[bin]]
