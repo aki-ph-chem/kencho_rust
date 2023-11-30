@@ -171,6 +171,10 @@ name = "linked_list_unsafe"
 path = "src/ss8/linked_list_unsafe.rs"
 
 [[bin]]
+name = "linked_list_safe"
+path = "src/ss8/linked_list_safe.rs"
+
+[[bin]]
 name = "bi_list_unsafe"
 path = "src/ss8/bidirectional_list_unsafe.rs"
 
